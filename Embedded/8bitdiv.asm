@@ -1,0 +1,13 @@
+LDA 2050H
+	MOV B,A
+	LDA 2051H
+	MVI C, 00H
+Next: CMP B
+	JC Loop
+	INR C
+	SUB B
+	JMP Next
+Loop: STA 2052H
+	MOV A,C
+	STA 2053H
+	HLT
