@@ -1,0 +1,9 @@
+MVI a,2H
+MOV b,a
+MVI a,3H
+add b
+STA 2040H
+MVI a,0H
+LDA 2040H
+OUT 3H
+HLT
