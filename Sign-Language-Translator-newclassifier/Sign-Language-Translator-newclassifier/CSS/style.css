@@ -1,0 +1,483 @@
+/*
+Style Sheet for American Sign Language Translator. This file is responsible for the aesthetics of the Translator
+
+Author: Sufiyaan Nadeem
+*/
+
+body {
+  font-family: "Google Sans", "sans-serif";
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: .75em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  outline: 1px solid slategrey;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #bababa;
+}
+
+#welcomeContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#welcomeScreen {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  /*border: 15px solid orange;*/
+  font-family: "Google Sans", "sans-serif";
+}
+
+#welcomeScreen h1 {
+  font-size: 50px;
+  font-weight: 500;
+  color: black;
+  overflow: hidden;
+  border-right: .06em solid #4d4d4d;
+  white-space: nowrap;
+  /*border: 1px solid orange;*/
+  font-family: "Google Sans", "sans-serif";
+  margin: 0px;
+  animation: typing 2s steps(30, end), blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: #4d4d4d
+  }
+}
+
+#welcomeScreen h3 {
+  padding-top: 10px;
+  margin: 0px;
+  color: #4d4d4d;
+  font-size: 30px;
+  font-style: italic;
+  /*border: 1px solid orange;*/
+  font-weight: 500;
+}
+
+#video {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  background-color: black;
+  transition: 1s;
+}
+
+#videoHolder {
+  background-color: black;
+  border: 8px solid black;
+  display: inline-block;
+  border-radius: 5px;
+  vertical-align: middle;
+  transition: 1s;
+}
+
+.videoContainerTrain {
+  height: 320px;
+  width: 550px;
+  margin-top: 0px;
+}
+
+.videoContainerPredict {
+  width: 650px;
+  height: 370px;
+  margin-top: -35px;
+}
+
+.videoTrain {
+  height: 320px;
+  width: 500px;
+}
+
+.videoPredict {
+  height: 370px;
+  width: 500px;
+}
+
+#videoCall {
+  display: none;
+  width: 650px;
+  height: 370px;
+  border: none;
+  overflow: hidden;
+  left: 2.5%;
+}
+
+h5 {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0px;
+  height: 40px;
+}
+
+h7 {
+  font-size: 20px;
+  margin: 0px;
+  /*border: 1px solid orange;*/
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Product Sans';
+}
+
+button {
+  text-align: center;
+  /* bring your own prefixes */
+  font-family: "Google Sans", "sans-serif";
+  background-color: #000000;
+  color: white;
+  font-size: 25px;
+  padding: 8px 25px;
+  font-weight: 200;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: .3s;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+#checkmark_startButton {
+  padding-bottom: 5px;
+}
+
+#checkmark_stopButton {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+#proceedButton {
+  top: 90%;
+  transform: translate(-50%, 0%);
+  left: 50%;
+  position: fixed;
+  display: none;
+}
+
+#startButton {
+  display: block;
+  margin: 0 auto;
+}
+
+#stopButton {
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
+}
+
+.clearButton {
+  padding: 4px 10px;
+  font-size: 18px;
+  color: black;
+  background-color: #cc0000;
+  margin: 0 auto;
+}
+
+.trainBtn {
+  padding: 4px 10px;
+  font-size: 18px;
+  color: black;
+  background-color: #47aa42;
+  margin: 0 auto;
+  margin-right: 20px;
+}
+
+.trainButton {
+  margin-top: 25px;
+  right: 2.5%;
+  z-index: 3;
+}
+
+#nextButton {
+  top: 30%;
+  right: 2.5%;
+  z-index: 2;
+  position: fixed;
+}
+
+#predictButton {
+  top: 30%;
+  right: 2.5%;
+  z-index: 2;
+  position: fixed;
+  display: none;
+}
+
+#backButton {
+  top: 30%;
+  left: 2.5%;
+  z-index: 2;
+  position: fixed;
+  display: none;
+}
+
+.videoCallBtn {
+  top: 30%;
+  right: 2.5%;
+  z-index: 2;
+  position: fixed;
+  display: none;
+  background: blue;
+}
+
+#status {
+  width: 300px;
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  z-index: 3;
+  left: 0%;
+  top: 0%;
+  border-top: none;
+  text-align: center;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  transition: .4s;
+  display: none;
+}
+
+#status p {
+  color: white;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+#translatorWindow {
+  width: 100%;
+  height: 350px;
+  display: inline-block;
+  z-index: 1;
+  margin-top: 200px;
+  left: 50%;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: black;
+  vertical-align: middle;
+}
+
+.checkMark {
+  height: 30px;
+}
+
+.doneRetrain {
+  background-color: white;
+  border: none;
+  color: black;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0 auto;
+  border-radius: 3px;
+  display: none;
+}
+
+.counter {
+  font-weight: 100;
+  font-size: 18px;
+  color: black;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+}
+
+#titleBar {
+  text-align: center;
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  width: 100%;
+  /* bring your own prefixes */
+  transform: translate(-50%, 0%);
+  font-family: "Google Sans", "sans-serif";
+  background-color: white;
+  z-index: 2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#titleBar h1 {
+  font-size: 50px;
+  font-weight: 500;
+  color: black;
+  /*overflow: hidden;*/
+  border-right: .06em solid #4d4d4d;
+  white-space: nowrap;
+  font-family: "Google Sans", "sans-serif";
+  margin: 0px;
+  display: inline-block;
+  animation: typing 2s steps(30, end), blink-caret .5s step-end infinite;
+  margin-top: 20px;
+}
+
+#titleBar h3 {
+  padding-top: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: #4d4d4d;
+  font-size: 22px;
+  /*border: 1px solid orange;*/
+  font-weight: 500;
+}
+
+.trained-gestures {
+  float: left;
+  width: 215px;
+  height: 200px;
+  margin: 17px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  transition: .4s;
+}
+
+#trainedCardsHolder {
+  display: none;
+}
+
+#trainingHolder {
+  display: none;
+  float: left;
+  width: 315px;
+  height: 180px;
+  margin-left: 100px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+}
+
+#initialTrainingHolder {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding-right: 100px;
+}
+
+#translationHolder {
+  bottom: 0;
+  color: black;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  display: none;
+  margin-top: 30px;
+}
+
+#translationHolder h3 {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+#trainingCommands {
+  margin-top: 25px;
+}
+
+img.plus_sign {
+  height: 80px;
+  display: block;
+  padding: 15px;
+  margin: 0 auto;
+  /*border: 1px solid orange;*/
+}
+
+#translatedCard {
+  width: 20%;
+  top: 225px;
+  position: absolute;
+}
+
+img.trained_image {
+  height: 130px;
+  display: block;
+  padding: 3px 0px;
+  margin: 0 auto;
+}
+
+canvas.trained_image {
+  height: 130px;
+  width: 170px;
+  display: block;
+  padding: 3px 0px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 1px;
+}
+
+#new-word {
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  width: 190px;
+  border-radius: 3px;
+  border: none;
+  font-family: 'Product Sans';
+  vertical-align: middle;
+}
+
+#submit-word {
+  font-family: 'Product Sans';
+  background-color: white;
+  border: none;
+  color: black;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 1px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
