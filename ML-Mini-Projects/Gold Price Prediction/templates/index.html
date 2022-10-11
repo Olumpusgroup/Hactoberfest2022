@@ -1,0 +1,65 @@
+<!--{% extends "material/base.html " %}-->
+{% block content %}
+<html>
+
+<head>
+  <link href="{{ url_for('static',filename='css/index.css')}}" rel="stylesheet">
+  <title>Gold Price Prediction</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <div>
+      <a href="#" class="heading"><b>Gold Price Prediction</b></a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <form action='/predict' method="post" class="col l12">
+        <div class="row">
+
+          <div class="label col s5 ">
+            <label for="spx" class="label">SPX</label>
+            <input placeholder="Stock Market Index" id="one" name="1" type="text" class="validate">
+          </div>
+
+          <div class="label col s5">
+            <label for="uso" class="label">USO</label>
+            <input id="two" name="2" type="text" class="validate" placeholder="United States Oil Fund">
+          </div>
+
+          <div class="label col s5">
+            <label for="slv" class="label">SLV</label>
+            <input id="three" type="text" name="3" class="validate" placeholder="Silver Price">
+          </div>
+
+          <div class="label col s5">
+            <label for="eur/usd" class="label">EUR/USD</label>
+            <input id="four" name="4" type="text" class="validate" placeholder="Euro against U.S. dollar pair">
+          </div>
+
+        </div>
+
+        <div id="div">
+          <button class="btn waves-effect">PREDICT GLD PRICE</button>
+          <h4 align="center" class="pre"><b>{{pred}}</b></h4>
+        </div>
+        </div>
+        <br>
+      </form>
+    </div>   
+  </div>    
+</body>
+
+<div class="content">
+  <h4>GLD is the largest Exchange traded fund to invest directly in physical gold.
+    <br>
+    Every unit of a Gold ETF represents one gram of gold and is of 99.5% purity.</h4>
+</div>
+
+</html>
+
+
+
+{% endblock%}
