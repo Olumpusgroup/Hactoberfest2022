@@ -1,0 +1,116 @@
+html,body{
+  min-height: 100%;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: url(https://www.usmoneyreserve.com/wp-content/uploads/2019/01/2019.01.31_Stack-of-money-coin-with-forex-trading-graph-financial-investment-concept-use-for-background.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+input{
+  color: rgb(46, 42, 42);
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button{
+  margin: 0;
+  top: 50%;
+  font-family: Cambria, Cochin, Georgia;
+}
+
+.container{
+  padding: 0.3rem;
+  padding-top: 70px;
+}
+::placeholder { 
+  color: black;
+  opacity: 1;
+}
+
+.row{
+  padding-top: 50px;
+}
+
+.nav{
+  opacity: 0.8;
+  z-index: -1;
+  content: "";
+  background-color: black;
+  height: 90px;
+  z-index: -1;
+  position: absolute;
+  font-family: Cambria, Cochin, Georgia;
+}
+
+.heading{
+  color: rgb(231, 185, 31);
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.row{
+  padding-top: 100px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.row .col.s5 {
+    width: 41.66667%;
+    margin-left: 30px;
+}
+
+.content{
+  color: yellow;
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia;
+  text-align: center;
+  opacity: 0.8;
+  z-index: -1;
+  content: "";
+  background-color: black;
+  padding: 4px;
+  margin-top: 140px;
+}
+
+.btn{
+  margin: 8px;
+  border-radius: 5px;
+  background-color: rgb(255, 136, 0); 
+  font-size: 24px;
+  margin-left: 450px;
+}
+
+.btn:hover{
+  background-color: rgb(255, 156, 27);
+}
+
+.pre {
+  font-size:60px;
+  font-weight:bold;
+  color: brown;
+  margin: 0px;
+  padding-top: 250px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  
+}
+
+
+.label{
+  color: black;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia;
+}
+
+
+
+
+
