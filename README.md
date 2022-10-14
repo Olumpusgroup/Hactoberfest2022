@@ -1,3 +1,4 @@
+## This repo has been excluded from HACKTOBERFEST
 # Hackoctober by Olumpusgroup
 We are a here to encourage new people to learn contributing to open source.
 We have made this repostiory for people to share codes solutions from Codeforces, codechef, hackerrank,etc in various languages of your choice.
