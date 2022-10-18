@@ -5,20 +5,24 @@ int main()
     int n;
     cout<<"enter your no. ";
     cin>>n;
-    int i;
+    int i,flag=0;
     for (i = 2; i<=n-1; i++)
     {
         /* code */
         if(n%i==0)
         {
-            cout<<"not prime "<<endl;
+            flag=1;
             break;
         }
     }
     
-    if(i == n)
+    if(flag==0)
     {
         cout<<"prime "<<endl;
+    }
+    else
+    {
+        cout<<"Not Prime"<<endl;
     }
 
     return 0;
